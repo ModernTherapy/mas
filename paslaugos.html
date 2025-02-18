@@ -35,6 +35,25 @@
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .service {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .service {
+                width: 80%;
+            }
+        }
         h1, h2 {
             color: #333;
         }
@@ -61,14 +80,20 @@
     <h1>Masažo Paslaugos</h1>
     <p>Siūlome aukštos kokybės masažo paslaugas, skirtas gerinti savijautą ir palaikyti sveikatą.</p>
     
-    <h2>Sportinis masažas</h2>
-    <p>Sportinis masažas padeda atkurti raumenų funkciją po fizinio krūvio, mažina skausmą ir pagerina lankstumą.</p>
-
-    <h2>Gydomasis masažas</h2>
-    <p>Gydomasis masažas skirtas malšinti raumenų įtampą, gerinti kraujotaką ir mažinti skausmą.</p>
-
-    <h2>Relaksacinis masažas</h2>
-    <p>Relaksacinis masažas suteikia gilų atsipalaidavimą, mažina stresą ir gerina bendrą savijautą.</p>
+    <div class="services">
+        <div class="service">
+            <h2>Sportinis masažas</h2>
+            <p>Padeda atkurti raumenų funkciją po fizinio krūvio, mažina skausmą ir pagerina lankstumą.</p>
+        </div>
+        <div class="service">
+            <h2>Gydomasis masažas</h2>
+            <p>Skirtas malšinti raumenų įtampą, gerinti kraujotaką ir mažinti skausmą.</p>
+        </div>
+        <div class="service">
+            <h2>Relaksacinis masažas</h2>
+            <p>Suteikia gilų atsipalaidavimą, mažina stresą ir gerina bendrą savijautą.</p>
+        </div>
+    </div>
 </div>
 
 <footer>
