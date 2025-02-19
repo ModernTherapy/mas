@@ -5,15 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Masažas Klaipėda - profesionalūs, atpalaiduojantys ir sportiniai masažai">
     <title>Masažas Klaipėda</title>
-    <link rel="stylesheet" href="menu.css"> <!-- Link to the menu.css for styling -->
+    <style>
+        /* Style for the menu */
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- This is where the menu will be loaded -->
+    <!-- The menu will be inserted here -->
     <div id="menu-container"></div>
 
-    <!-- JavaScript to dynamically load the menu -->
-    <script src="menu.js"></script>
+    <script>
+        // JavaScript to load the menu
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuHTML = `
+                <div class="menu">
+                    <a href="index.html">Pagrindinis</a>
+                    <a href="apie.html">Apie</a>
+                    <a href="paslaugos.html">Paslaugos</a>
+                    <a href="atsiliepimai.html">Atsiliepimai</a>
+                    <a href="kontaktai.html">Kontaktai</a>
+                </div>
+            `;
+            document.getElementById("menu-container").innerHTML = menuHTML;
+        });
+    </script>
 
 </body>
 </html>
