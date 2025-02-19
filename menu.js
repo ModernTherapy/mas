@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             document.getElementById("menu-container").innerHTML = data;
 
-            // Force CSS to reapply (fix for GitHub Pages)
+            // Ensure CSS is loaded for the dynamically inserted content
             let link = document.createElement("link");
             link.rel = "stylesheet";
-            link.href = "style.css";
+            link.href = "menu.css"; // Make sure this matches the correct path
             document.head.appendChild(link);
         })
         .catch(error => console.error("Error loading menu:", error));
