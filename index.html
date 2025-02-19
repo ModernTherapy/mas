@@ -5,46 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Masažas Klaipėda - profesionalūs, atpalaiduojantys ir sportiniai masažai">
     <title>Masažas Klaipėda</title>
-    <style>
-        /* Style for the menu */
-        .menu {
-            background-color: #333;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        .menu a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .menu a:hover {
-            background-color: #575757;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- The menu will be inserted here -->
+    <!-- The menu will be dynamically loaded here -->
     <div id="menu-container"></div>
 
+    <div class="content">
+        <h1>Welcome to Masažas Klaipėda</h1>
+        <p>This is the main page content.</p>
+    </div>
+
+    <!-- Load the menu with external content -->
     <script>
-        // JavaScript to load the menu
         document.addEventListener("DOMContentLoaded", function () {
-            const menuHTML = `
-                <div class="menu">
-                    <a href="index.html">Pagrindinis</a>
-                    <a href="apie.html">Apie</a>
-                    <a href="paslaugos.html">Paslaugos</a>
-                    <a href="atsiliepimai.html">Atsiliepimai</a>
-                    <a href="kontaktai.html">Kontaktai</a>
-                </div>
-            `;
-            document.getElementById("menu-container").innerHTML = menuHTML;
+            fetch("menu.html")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to load menu.html");
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById("menu-container").innerHTML = data;
+                })
+                .catch(error => {
+                    console.error("Error loading menu:", error);
+                });
         });
     </script>
 
