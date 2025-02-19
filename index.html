@@ -6,6 +6,9 @@
     <meta name="description" content="Masažas Klaipėda - profesionalūs, atpalaiduojantys ir sportiniai masažai">
     <title>Masažas Klaipėda</title>
 
+    <!-- Import Jura font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet">
+
     <style>
         /* Reset some default styles */
         * {
@@ -50,15 +53,28 @@
             width: 100%;
             height: auto;
             object-fit: cover;
-            position: relative; /* Needed for positioning buttons */
+            position: relative; /* Needed for positioning text and buttons */
+        }
+
+        /* Text in the center of the image */
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Jura', sans-serif; /* Use Jura font */
+            font-size: 60px;
+            font-weight: bold;
+            color: black;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds shadow to text for better visibility */
         }
 
         /* Centered Buttons on the Hero Image */
         .buttons-container {
             position: absolute;
-            top: 50%;
+            top: 70%; /* Move buttons further down */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             display: flex;
             gap: 20px;
         }
@@ -121,6 +137,11 @@
         <a href="contact.html">Kontaktai</a>
     </div>
 
+    <!-- Hero Text (Title in Big Font) -->
+    <div class="hero-text">
+        MASAŽAS KLAIPĖDA
+    </div>
+
     <!-- Two Big Buttons in the center of the Image -->
     <div class="buttons-container">
         <a href="catalog.html" class="button">Masažų katalogas</a>
@@ -135,4 +156,5 @@
         <button onclick="window.location.href='https://judesio.lt'">Užsisakyti masažą</button>
     </div>
 
-</body
+</body>
+</html>
