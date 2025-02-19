@@ -14,3 +14,7 @@
 .menu a:hover {
     background-color: #575757;
 }
+
+#menu-container .menu {
+    display: flex !important;
+}
