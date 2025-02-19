@@ -5,119 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Masažas Klaipėda - profesionalūs, atpalaiduojantys ir sportiniai masažai">
     <title>Masažas Klaipėda</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .menu {
-            background-color: #333;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-        .menu a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        .menu a:hover {
-            background-color: #575757;
-        }
-        header {
-            background-image: url('your-image.jpg');
-            background-size: cover;
-            padding: 50px;
-            color: white;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 36px;
-        }
-        .content {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .service {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-        .service div {
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 30%;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 50px;
-        }
-        @media (max-width: 768px) {
-            .service {
-                flex-direction: column;
-                align-items: center;
-            }
-            .service div {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="menu">
-    <a href="apie.html">Apie</a>
-    <a href="paslaugos.html">Paslaugos</a>
-    <a href="atsiliepimai.html">Atsiliepimai</a>
-    <a href="kontaktai.html">Kontaktai</a>
-</div>
+    <div id="menu-container"></div> <!-- The menu will be loaded here -->
 
-<header>
-    <h1>Masažas Klaipėda: Profesionalūs, atpalaiduojantys ir sportiniai masažai</h1>
-    <button onclick="window.location.href='https://judesio.lt'">Užsisakyti masažą</button>
-</header>
+    <header>
+        <h1>Masažas Klaipėda: Profesionalūs, atpalaiduojantys ir sportiniai masažai</h1>
+        <button onclick="window.location.href='https://judesio.lt'">Užsisakyti masažą</button>
+    </header>
 
-<div class="content">
-    <h2 id="apie">Apie masažus</h2>
-    <p>Masažai yra ne tik puikus būdas atsipalaiduoti, bet ir gerinti bendrą savijautą, mažinti stresą ir įtampą.</p>
-
-    <h2 id="paslaugos">Mūsų paslaugos</h2>
-    <div class="service">
-        <div>
-            <h3>Sportinis masažas</h3>
-            <p>Naudingas sportuojantiems ir norintiems atstatyti raumenis po fizinio krūvio.</p>
-        </div>
-        <div>
-            <h3>Gydomasis masažas</h3>
-            <p>Padeda gydyti raumenų skausmus, nervų įtampą ir sumažinti kūno stresą.</p>
-        </div>
-        <div>
-            <h3>Relaksacinis masažas</h3>
-            <p>Puikus pasirinkimas norintiems atsipalaiduoti ir sumažinti kasdienį stresą.</p>
-        </div>
+    <div class="content">
+        <h2 id="apie">Apie masažus</h2>
+        <p>Masažai yra ne tik puikus būdas atsipalaiduoti, bet ir gerinti bendrą savijautą, mažinti stresą ir įtampą.</p>
     </div>
 
-    <h2 id="atsiliepimai">Atsiliepimai</h2>
-    <p>„Puikus masažas! Jaučiuosi visiškai atsigavęs.“ – Tomas</p>
-    <p>„Rekomenduoju! Masažo meistras labai profesionalus.“ – Laura</p>
+    <footer id="kontaktai">
+        <p>Kontaktai: +370 600 00000 | info@masazai-klaipeda.lt</p>
+        <p>Sekite mus: Facebook, Instagram</p>
+    </footer>
 
-    <button onclick="window.location.href='https://judesio.lt'">Apsilankykite mūsų svetainėje</button>
-</div>
-
-<footer id="kontaktai">
-    <p>Kontaktai: +370 600 00000 | info@masazai-klaipeda.lt</p>
-    <p>Sekite mus: Facebook, Instagram</p>
-</footer>
-
+    <script src="menu.js"></script> <!-- Load menu dynamically -->
 </body>
 </html>
