@@ -129,11 +129,21 @@
 
             /* Adjust the text size of the hero text */
             .hero-text {
-                font-size: 36px;
+                position: absolute;
+                top: 10%; /* Move hero text to the top */
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 36px; /* Adjust font size for mobile */
+                color: white; /* Change color to white for visibility */
+                text-shadow: none; /* Remove shadow for better readability on mobile */
             }
 
             .buttons-container {
                 top: 80%; /* Lower buttons a little on mobile */
+            }
+
+            .menu {
+                top: 20%; /* Move menu down to avoid covering the hero text */
             }
         }
     </style>
