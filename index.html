@@ -50,6 +50,31 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+            position: relative; /* Needed for positioning buttons */
+        }
+
+        /* Centered Buttons on the Hero Image */
+        .buttons-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: grey;
+            color: black;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 30px; /* Rounded buttons */
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #575757;
         }
 
         /* Content Section */
@@ -85,7 +110,7 @@
     <!-- Top Hero Image -->
     <picture>
         <source srcset="images/masazas-klaipeda-2.jpg" media="(max-width: 768px)">
-        <img src="images/masazas-klaipeda.jpg" alt="Masažas Klaipėda" class="hero-image">
+        <img src="images/masazas-klaipeda-1.jpg" alt="Masažas Klaipėda" class="hero-image">
     </picture>
 
     <!-- The menu section -->
@@ -96,6 +121,12 @@
         <a href="contact.html">Kontaktai</a>
     </div>
 
+    <!-- Two Big Buttons in the center of the Image -->
+    <div class="buttons-container">
+        <a href="catalog.html" class="button">Masažų katalogas</a>
+        <a href="register.html" class="button">Registruotis vizitui</a>
+    </div>
+
     <!-- Main Content Section -->
     <div class="content">
         <h1>Welcome to Masažas Klaipėda</h1>
@@ -104,5 +135,4 @@
         <button onclick="window.location.href='https://judesio.lt'">Užsisakyti masažą</button>
     </div>
 
-</body>
-</html>
+</body
