@@ -31,6 +31,7 @@
             top: 0;
             width: 100%;
             z-index: 1000; /* Keep the menu on top */
+            flex-wrap: wrap; /* Allow wrapping of menu items */
         }
 
         .menu a {
@@ -40,7 +41,7 @@
             text-align: center;
             background-color: grey; /* Grey background for buttons */
             border-radius: 30px; /* Rounded buttons */
-            margin: 0 10px;
+            margin: 5px; /* Add margin for spacing between items */
             transition: background-color 0.3s ease;
         }
 
@@ -117,6 +118,23 @@
 
         button:hover {
             background-color: #575757;
+        }
+
+        /* Media Query for mobile screens */
+        @media (max-width: 768px) {
+            .menu a {
+                width: 45%; /* Make each menu item take up 45% width */
+                margin: 5px 0; /* Adjust the margin to space items vertically */
+            }
+
+            /* Adjust the text size of the hero text */
+            .hero-text {
+                font-size: 36px;
+            }
+
+            .buttons-container {
+                top: 80%; /* Lower buttons a little on mobile */
+            }
         }
     </style>
 
