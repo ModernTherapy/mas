@@ -5,24 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Masažas Klaipėda - profesionalūs, atpalaiduojantys ir sportiniai masažai">
     <title>Masažas Klaipėda</title>
+
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Menu Styles */
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+            }
+            .menu a {
+                width: 100%;
+                text-align: left;
+                padding: 12px 20px;
+                border-top: 1px solid #444;
+            }
+        }
+
+        /* Content Section */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #575757;
+        }
+    </style>
+
 </head>
 <body>
 
-    <!-- The menu will be dynamically loaded here -->
-    <div id="menu-container"></div>
-
-    <div class="content">
-        <h1>Welcome to Masažas Klaipėda</h1>
-        <p>This is the main page content.</p>
+    <!-- The menu section -->
+    <div class="menu">
+        <a href="index.html">Pagrindinis</a>
+        <a href="about.html">Apie</a>
+        <a href="services.html">Paslaugos</a>
+        <a href="contact.html">Kontaktai</a>
     </div>
 
-    <!-- Load the menu with external content -->
+    <!-- Main Content Section -->
+    <div class="content">
+        <h1>Welcome to Masažas Klaipėda</h1>
+        <p>This is the main page content. Here we can describe our services, share testimonials, and provide contact information.</p>
+
+        <button onclick="window.location.href='https://judesio.lt'">Užsisakyti masažą</button>
+    </div>
+
+    <!-- Additional JS code (if any) -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("menu.html")
-                .then(response => response.text())  // Load the menu as text
-                .then(data => document.getElementById("menu-container").innerHTML = data); // Insert it into the div
-        });
+        // Example of additional JS functionality, if needed
+        console.log("Page loaded successfully!");
     </script>
 
 </body>
