@@ -6,11 +6,11 @@
     <meta name="description" content="Masažas Klaipėda - profesionalūs, atpalaiduojantys ir sportiniai masažai">
     <title>Masažas Klaipėda</title>
 
-
     <!-- Import Jura font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet">
 
     <style>
+        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
@@ -28,61 +28,64 @@
             justify-content: center;
             padding: 10px 0;
             position: absolute;
-            top: 10%;
+            top: 0;
             width: 100%;
-            z-index: 1000;
+            z-index: 1000; /* Keep the menu on top */
+            flex-wrap: wrap; /* Allow wrapping of menu items */
         }
 
         .menu a {
             color: black;
-            padding: 14px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             text-align: center;
-            background-color: grey;
-            border-radius: 20px;
-            margin: 5px;
+            background-color: grey; /* Grey background for buttons */
+            border-radius: 30px; /* Rounded buttons */
+            margin: 5px; /* Add margin for spacing between items */
             transition: background-color 0.3s ease;
         }
 
         .menu a:hover {
-            background-color: #575757;
+            background-color: #575757; /* Darker grey on hover */
         }
 
-        /* Image styles */
+        /* Image styles for desktop */
         .hero-image {
             width: 100%;
             height: auto;
             object-fit: cover;
+            position: relative; /* Needed for positioning text and buttons */
         }
 
-        /* Hero Text */
+        /* Text in the center of the image */
         .hero-text {
             position: absolute;
-            top: 10%;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            font-family: 'Jura', sans-serif;
-            font-size: 50px;
+            transform: translate(-50%, -50%);
+            font-family: 'Jura', sans-serif; /* Use Jura font */
+            font-size: 60px;
             font-weight: bold;
             color: black;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds shadow to text for better visibility */
         }
 
-        /* Buttons Container */
+        /* Centered Buttons on the Hero Image */
         .buttons-container {
             position: absolute;
-            top: 60%;
+            top: 70%; /* Move buttons further down */
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         .button {
             background-color: grey;
             color: black;
-            padding: 15px 30px;
+            padding: 20px 40px;
             text-decoration: none;
-            border-radius: 20px;
+            border-radius: 30px; /* Rounded buttons */
             font-size: 18px;
             transition: background-color 0.3s ease;
         }
@@ -91,36 +94,46 @@
             background-color: #575757;
         }
 
-        /* Mobile Styles ONLY */
+        /* Content Section */
+        .content {
+            padding: 20px;
+            text-align: center;
+            margin-top: 100px; /* Give space to the image and menu */
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 30px; /* Rounded button */
+        }
+
+        button:hover {
+            background-color: #575757;
+        }
+
+        /* Media Query for mobile screens */
         @media (max-width: 768px) {
-            .hero-text {
-                top: 5%; /* Move text to the top */
-                font-size: 36px;
-                color: white;
-            }
-
-            .menu {
-                top: 30%; /* Move menu lower */
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
             .menu a {
-                width: 45%;
-                margin: 5px 0;
-                text-align: center;
+                width: 45%; /* Make each menu item take up 45% width */
+                margin: 5px 0; /* Adjust the margin to space items vertically */
+            }
+
+            /* Adjust the text size of the hero text */
+            .hero-text {
+                font-size: 36px;
             }
 
             .buttons-container {
-                top: 50%; /* Move buttons lower */
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .button {
-                padding: 12px 20px; /* Make mobile buttons smaller */
-                font-size: 16px;
-                text-align: center;
+                top: 80%; /* Lower buttons a little on mobile */
             }
         }
     </style>
@@ -134,7 +147,7 @@
         <img src="images/masazas-klaipeda-1.jpg" alt="Masažas Klaipėda" class="hero-image">
     </picture>
 
-    <!-- Menu -->
+    <!-- The menu section -->
     <div class="menu">
         <a href="index.html">Pagrindinis</a>
         <a href="about.html">Apie</a>
@@ -142,15 +155,23 @@
         <a href="contact.html">Kontaktai</a>
     </div>
 
-    <!-- Hero Text -->
+    <!-- Hero Text (Title in Big Font) -->
     <div class="hero-text">
         MASAŽAS KLAIPĖDA
     </div>
 
-    <!-- Buttons -->
+    <!-- Two Big Buttons in the center of the Image -->
     <div class="buttons-container">
         <a href="catalog.html" class="button">Masažų katalogas</a>
         <a href="register.html" class="button">Registruotis vizitui</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h1>Welcome to Masažas Klaipėda</h1>
+        <p>This is the main page content. Here we can describe our services, share testimonials, and provide contact information.</p>
+
+        <button onclick="window.location.href='https://judesio.lt'">Užsisakyti masažą</button>
     </div>
 
 </body>
