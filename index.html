@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
@@ -28,64 +27,61 @@
             justify-content: center;
             padding: 10px 0;
             position: absolute;
-            top: 0;
+            top: 10%;
             width: 100%;
-            z-index: 1000; /* Keep the menu on top */
-            flex-wrap: wrap; /* Allow wrapping of menu items */
+            z-index: 1000;
         }
 
         .menu a {
             color: black;
-            padding: 12px 25px;
+            padding: 14px 20px;
             text-decoration: none;
             text-align: center;
-            background-color: grey; /* Grey background for buttons */
-            border-radius: 30px; /* Rounded buttons */
-            margin: 5px; /* Add margin for spacing between items */
+            background-color: grey;
+            border-radius: 20px;
+            margin: 5px;
             transition: background-color 0.3s ease;
         }
 
         .menu a:hover {
-            background-color: #575757; /* Darker grey on hover */
+            background-color: #575757;
         }
 
-        /* Image styles for desktop */
+        /* Image styles */
         .hero-image {
             width: 100%;
             height: auto;
             object-fit: cover;
-            position: relative; /* Needed for positioning text and buttons */
         }
 
-        /* Text in the center of the image */
+        /* Hero Text */
         .hero-text {
             position: absolute;
-            top: 50%;
+            top: 10%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Jura', sans-serif; /* Use Jura font */
-            font-size: 60px;
+            transform: translateX(-50%);
+            font-family: 'Jura', sans-serif;
+            font-size: 50px;
             font-weight: bold;
             color: black;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds shadow to text for better visibility */
         }
 
-        /* Centered Buttons on the Hero Image */
+        /* Buttons Container */
         .buttons-container {
             position: absolute;
-            top: 70%; /* Move buttons further down */
+            top: 60%;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         .button {
             background-color: grey;
             color: black;
-            padding: 20px 40px;
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 30px; /* Rounded buttons */
+            border-radius: 20px;
             font-size: 18px;
             transition: background-color 0.3s ease;
         }
@@ -94,56 +90,36 @@
             background-color: #575757;
         }
 
-        /* Content Section */
-        .content {
-            padding: 20px;
-            text-align: center;
-            margin-top: 100px; /* Give space to the image and menu */
-        }
-
-        .content h1 {
-            margin-bottom: 20px;
-        }
-
-        /* Button Styles */
-        button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 30px; /* Rounded button */
-        }
-
-        button:hover {
-            background-color: #575757;
-        }
-
-        /* Media Query for mobile screens */
+        /* Mobile Styles ONLY */
         @media (max-width: 768px) {
-            .menu a {
-                width: 45%; /* Make each menu item take up 45% width */
-                margin: 5px 0; /* Adjust the margin to space items vertically */
-            }
-
-            /* Adjust the text size of the hero text */
             .hero-text {
-                position: absolute;
-                top: 10%; /* Move hero text to the top */
-                left: 50%;
-                transform: translateX(-50%);
-                font-size: 36px; /* Adjust font size for mobile */
-                color: white; /* Change color to white for visibility */
-                text-shadow: none; /* Remove shadow for better readability on mobile */
-            }
-
-            .buttons-container {
-                top: 80%; /* Lower buttons a little on mobile */
+                top: 5%; /* Move text to the top */
+                font-size: 36px;
+                color: white;
             }
 
             .menu {
-                top: 20%; /* Move menu down to avoid covering the hero text */
+                top: 30%; /* Move menu lower */
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu a {
+                width: 45%;
+                margin: 5px 0;
+                text-align: center;
+            }
+
+            .buttons-container {
+                top: 75%; /* Move buttons lower */
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .button {
+                padding: 12px 20px; /* Make mobile buttons smaller */
+                font-size: 16px;
+                text-align: center;
             }
         }
     </style>
@@ -157,7 +133,7 @@
         <img src="images/masazas-klaipeda-1.jpg" alt="Masažas Klaipėda" class="hero-image">
     </picture>
 
-    <!-- The menu section -->
+    <!-- Menu -->
     <div class="menu">
         <a href="index.html">Pagrindinis</a>
         <a href="about.html">Apie</a>
@@ -165,23 +141,15 @@
         <a href="contact.html">Kontaktai</a>
     </div>
 
-    <!-- Hero Text (Title in Big Font) -->
+    <!-- Hero Text -->
     <div class="hero-text">
         MASAŽAS KLAIPĖDA
     </div>
 
-    <!-- Two Big Buttons in the center of the Image -->
+    <!-- Buttons -->
     <div class="buttons-container">
         <a href="catalog.html" class="button">Masažų katalogas</a>
         <a href="register.html" class="button">Registruotis vizitui</a>
-    </div>
-
-    <!-- Main Content Section -->
-    <div class="content">
-        <h1>Welcome to Masažas Klaipėda</h1>
-        <p>This is the main page content. Here we can describe our services, share testimonials, and provide contact information.</p>
-
-        <button onclick="window.location.href='https://judesio.lt'">Užsisakyti masažą</button>
     </div>
 
 </body>
